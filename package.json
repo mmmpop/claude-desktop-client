@@ -33,6 +33,7 @@
     "url": "https://github.com/prevailexcel/claude-desktop-client"
   },
   "dependencies": {
+    "cli-truncate": "^5.1.1",
     "electron-context-menu": "^4.0.4"
   },
   "devDependencies": {
@@ -72,16 +73,33 @@
       "summary": "Desktop app for Claude AI assistant",
       "description": "An unofficial desktop application for accessing Claude AI",
       "plugs": [
-        "default",
+        "desktop",
+        "desktop-legacy",
+        "home",
+        "x11",
+        "wayland",
+        "unity7",
+        "browser-support",
         "network",
         "network-bind",
-        "browser-support"
+        "audio-playback",
+        "opengl"
+      ],
+      "stagePackages": [
+        "libnss3",
+        "libgbm1",
+        "libdrm2",
+        "libasound2",
+        "libxss1"
       ]
     },
+    "asar": false,
     "files": [
       "src/**/*",
       "package.json",
-      "assets/**/*"
+      "assets/**/*",
+      "node_modules/**/*",
+      "preload.js"
     ]
   }
 }
