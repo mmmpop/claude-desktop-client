@@ -29,7 +29,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Function to create the main application window
 const createWindow = () => {
     window = new BrowserWindow({
-        icon: path.join(__dirname, 'assets/icon.png'),
+        icon: path.join(__dirname, '../assets/icon.png'),
         autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: false,
